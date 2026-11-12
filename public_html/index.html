@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <title>Student Enrollment Form using JPDB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="page-header text-center">
+            <h2>Student Enrollment Form using the JPDB API</h2>
+        </div>
+
+        <form id="studentForm" method="get">
+
+            <div class="form-group">
+                <label>Roll No :</label>
+                <input type="text" id="rollNo" class="form-control" onchange="getStudent()">
+            </div>
+
+            <div class="form-group">
+                <label>Full Name :</label>
+                <input type="text" id="fullName" class="form-control" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Class :</label>
+                <input type="text" id="studentClass" class="form-control" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Birth Date :</label>
+                <input type="date" id="birthDate" class="form-control" disabled>
+            </div>
+
+            <div class="form-group">
+                <label>Address :</label>
+                <textarea id="address" class="form-control" rows="3" disabled></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Enrollment Date :</label>
+                <input type="date" id="enrollmentDate" class="form-control" disabled>
+            </div>
+
+            <div class="text-center">
+
+                <button type="button" id="save" class="btn btn-success" onclick="saveData()" disabled>
+                    Save
+                </button>
+
+                <button type="button" id="update" class="btn btn-primary" onclick="updateData()" disabled>
+                    Update
+                </button>
+
+                <button type="button" id="reset" class="btn btn-danger" onclick="resetForm()" disabled>
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
